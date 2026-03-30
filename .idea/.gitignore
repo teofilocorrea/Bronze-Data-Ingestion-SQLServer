@@ -1,0 +1,74 @@
+# =========================
+# Sistema operativo
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# IDEs (JetBrains / VSCode)
+# =========================
+.idea/
+*.iml
+.vscode/
+shelf/
+workspace.xml
+
+# =========================
+# Configuración local / sensible
+# =========================
+.env
+*.env
+server_vars.env
+*.local
+
+# =========================
+# Bases de datos locales
+# =========================
+*.duckdb
+*.duckdb.wal
+*.db
+*.sqlite
+
+# =========================
+# Datos fuente
+# =========================
+# ❌ NO versionar fuentes pesadas o sensibles
+data/source/*.xlsx
+data/source/*.parquet
+
+# ✅ Permitir CSV cuando son datasets públicos o de ejemplo
+# (ej: Kaggle, datasets educativos)
+!data/source/*.csv
+
+# =========================
+# Outputs generados
+# =========================
+# ❌ Ignorar outputs por defecto
+data/outputs/**
+data/outputs/
+
+# ✅ PERMITIR artefactos finales de profiling
+!data/outputs/profiling_tables/
+!data/outputs/profiling_tables/*.csv
+
+# (Opcional) permitir README explicativo
+!data/outputs/README.md
+
+# =========================
+# Notebooks
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# Logs y temporales
+# =========================
+*.log
+*.tmp
+*.bak
+
+# =========================
+# Archivos comprimidos
+# =========================
+*.zip
+*.tar
+*.gz
