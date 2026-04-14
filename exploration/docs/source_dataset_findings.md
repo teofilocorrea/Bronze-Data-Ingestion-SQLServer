@@ -1,12 +1,20 @@
-## 🔍 Validación de archivo fuente
+# Source Dataset Findings
 
-Se realizó la lectura del archivo CSV utilizando DuckDB mediante la función `read_csv_auto`.
+## Resumen
 
-### Delimitador
-El delimitador fue correctamente identificado como coma (`,`), ya que las columnas se separaron adecuadamente al momento de la lectura.
+- Registros totales: **10,000**
+- Estructura: Columnas detectadas correctamente mediante `DESCRIBE`
+- Tipos: Varias columnas interpretadas como `VARCHAR` debido a valores inconsistentes
 
-### Encoding
-No se detectaron problemas de encoding. Los valores de texto se visualizaron correctamente, sin presencia de caracteres inválidos o corruptos.
+## Hallazgos clave
 
-### Observaciones adicionales
-Se identificaron valores especiales como `ERROR`, `UNKNOWN` y campos vacíos, los cuales serán tratados en etapas posteriores del pipeline.
+- **Transaction ID**: Sin valores nulos
+- **Total Spent**: Valores no válidos (ej. `ERROR`, no numéricos)
+- **Payment Method**: Valores no definidos (ej. `UNKNOWN`)
+- **Item**: Valores vacíos o nulos
+- **Quantity**: Valores inválidos (negativos o no numéricos)
+
+## Conclusión
+
+El dataset puede ser ingerido en Bronze sin transformación.  
+Se requiere limpieza y estandarización en Silver.
