@@ -1,4 +1,4 @@
-![Bronze Data Ingestion](exploration/docs/analysis_exploration_bronze_coffee_Salescount_SQL.png)
+![Bronze Data Ingestion](docs/analysis_exploration_bronze_coffee_Salescount_SQL.png)
 
 ## Descripción
 
