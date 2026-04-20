@@ -17,7 +17,7 @@ El objetivo es comprender la estructura, tamaño y calidad básica de los datos 
     - análisis de estructura (`DESCRIBE`)
     - validaciones básicas de calidad
 
-- [📄 Documentación](exploration/docs)
+- [📄 Documentación](docs/)
   - `source_dataset_findings.md`: resumen de los hallazgos de la exploración
 
 ---
